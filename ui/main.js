@@ -7,8 +7,3 @@ element.innerHTML="Radhey-Radhey";
 
 // move the element
 var img= document.getElementById("madi");
-
-img.onclick = function(){
-     document.getElementById("madi").innerHTML = "Hello World";
- 
-};
