@@ -7,3 +7,8 @@ element.innerHTML="Radhey-Radhey";
 
 // move the element
 var img= document.getElementById("madi");
+
+img.onclick = function(){
+  
+  img.style.marginLeft = "100px";  
+};
