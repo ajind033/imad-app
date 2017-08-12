@@ -9,5 +9,6 @@ element.innerHTML="Radhey-Radhey";
 var img= document.getElementById("madi");
 
 img.onclick = function(){
-   element.innerHTML="Radhey-Radhey"; 
+     document.getElementById("madi").innerHTML = "Hello World";
+ 
 };
