@@ -7,6 +7,7 @@ element.innerHTML="Radhey-Radhey";
 
 // move the element
 var img= document.getElementById("madi");
+var marginleft=0;
 
 function moveRight (){
     marginleft = marginleft +5;
