@@ -72,7 +72,7 @@ var htmltemp =`
 <html>
     <head>
         <title>
-            $(title);
+            ${title};
         </title>
          <link href="/ui/style.css" rel="stylesheet" />
     </head>
@@ -82,13 +82,13 @@ var htmltemp =`
             <a href="/">Home</a>
         </div>
         <div>
-            Date :<b>$(date)</b>
+            Date :<b>${date}</b>
         </div>
          <div >
-            <h1>$(heading)</h1>
+            <h1>${heading}</h1>
         </div>
         <div>
-        $(content)
+        ${content}
         </div>
         </div>
     </body>
