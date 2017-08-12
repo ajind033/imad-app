@@ -9,6 +9,5 @@ element.innerHTML="Radhey-Radhey";
 var img= document.getElementById("madi");
 
 img.onclick = function(){
-  
-  img.style.marginLeft = '1200px';  
+   element.innerHTML="Radhey-Radhey"; 
 };
