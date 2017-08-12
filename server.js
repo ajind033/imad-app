@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleone1 :{
+var articleone1 ={
     title: 'Article-One|Bitcoin',
     date: '12/August/2017',
     heading: 'Article-One|Bitcoin',
@@ -18,7 +18,7 @@ Besides being created as a reward for mining, bitcoin can be exchanged for other
 
 As of February 2015, over 100,000 merchants and vendors accepted bitcoin as payment.[20] According to research produced by Cambridge University in 2017, there are 2.9 to 5.8 million unique users using a cryptocurrency wallet, most of them using bitcoin.
             </p> `
-};
+} ;
 var articles ={
     articleone :{
     title: 'Article-One|Bitcoin',
