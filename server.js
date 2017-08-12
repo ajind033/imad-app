@@ -99,9 +99,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/articleone',function(req,res) {
-  //var  articleName1 = req.params.articleName;
-  res.send(createTemp(articleone1));
+app.get('/:articleName',function(req,res) {
+  var  articleName1 = req.params.articleName;
+  res.send(createTemp(articles[articleName]));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
