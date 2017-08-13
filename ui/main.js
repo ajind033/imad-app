@@ -12,14 +12,11 @@ button.onclick = function(){
   
   request.onreadystatechange = function(){
       
-      if(request.readState === XMLHttpRequest.DONE) {
+      if(this.readState === 4) {
           //Take some task
           
-          if(requset.status === 200){
-              var counter = request.responseText;
-              
-              var count = document.getElementById("count");
-              count.innerHTML = counter.toString(); 
+          if(this.status === 200){
+              document.getElementById("count").innerHTML = this.responseText;
           }
       }
       //Not done Yet.
