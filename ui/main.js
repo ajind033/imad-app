@@ -34,7 +34,7 @@ submit.onclick = function(){
     var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
       
-      if(this.readystate == 4 && this.status == 200){
+      if(this.readystate === 4 && this.status === 200){
           var names= this.responseText;
           names = JSON.parse(names);
           var list="";
