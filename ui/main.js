@@ -1,21 +1,30 @@
 console.log('Loaded!');
 
-//change the text
+var button = document.getElementById("cbutton");
 
-var element = document.getElementById("mainText");
-element.innerHTML="Radhey-Radhey";
 
-// move the element
-var img= document.getElementById("madi");
-var marginleft=0;
-
-function moveRight (){
-    marginleft = marginleft +5;
-    img.style.marginLeft = marginleft+"px";   
-}
-
-img.onclick = function(){
+button.onclick = function(){
   
-  var interval =setInterval(moveRight,50);
+  // Create a request object.
+  var request = new XmlHttpRequest();
   
+  //capture the response and store it in a variable
+  
+  request.onreadystatechange = function(){
+      
+      if(request.readState === XmlHttpRequest.DONE) {
+          //Take some task
+          
+          if(requset.status === 200){
+              var counter = request.responseText;
+              
+              var count = document.getElementById("cspan");
+              count.innerHTML = counter.toString(); 
+          }
+      }
+      //Not done Yet.
+  };
+  
+  request.open("https://http://ajind033.imad.hasura-app.io/counter",true);
+  request.send(null);
 };
