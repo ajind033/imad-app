@@ -37,7 +37,13 @@ submit.onclick = function(){
       if(this.readystate == 4 && this.status == 200){
           var names= this.responseText;
           names = JSON.parse(names);
-          document.getElementById("namelist").innerHTML = names;
+          var list="";
+          
+          for(var i=0; i<names.length; i++){
+              list="<li>"+names[i]+"<li>";
+          }
+         
+          document.getElementById("namelist").innerHTML = list;
       }  
     };
     var nameinput = document.getElementById("name");
