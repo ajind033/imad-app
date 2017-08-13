@@ -12,7 +12,7 @@ button.onclick = function(){
   
   request.onreadystatechange = function(){
       
-      if(this.readState === 4) {
+      if(this.readyState === 4) {
           //Take some task
           
           if(this.status === 200){
