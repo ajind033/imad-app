@@ -25,6 +25,7 @@ button.onclick = function(){
       //Not done Yet.
   };
   
+  //Make a request.
   request.open("https://http://ajind033.imad.hasura-app.io/counter",true);
   request.send(null);
 };
