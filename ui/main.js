@@ -1,6 +1,6 @@
 console.log('Loaded!');
 
-var button = document.getElementById("cbutton");
+var button = document.getElementById("counter");
 
 
 button.onclick = function(){
@@ -18,7 +18,7 @@ button.onclick = function(){
           if(requset.status === 200){
               var counter = request.responseText;
               
-              var count = document.getElementById("cspan");
+              var count = document.getElementById("count");
               count.innerHTML = counter.toString(); 
           }
       }
