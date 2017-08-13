@@ -27,6 +27,26 @@ button.onclick = function(){
   request.send(null);
 };
 
+// submit name
+var submit = document.getElementById("submit_btn");
+submit.onclick = function(){
+    
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+      
+      if(this.readystate == 4 && this.status == 200){
+          var names= this.responseText;
+          names = JSON.parse(names);
+          document.getElementById("namelist").innerHTML = names;
+      }  
+    };
+    
+    var nameinput = document.getElementId("name");
+    var name = name.value;
+    
+  request.open("GET","http://ajind033.imad.hasura-app.io/submit-name?name="+name,true);
+  request.send(null);
+};
 
 /*
   var xhttp = new XMLHttpRequest();
