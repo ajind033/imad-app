@@ -23,7 +23,7 @@ button.onclick = function(){
   };
   
   //Make a request.
-  request.open("GET","http://ajind033.imad.hasura-app.io/counter",true);
+  request.open("GET","https://ajind033.imad.hasura-app.io/counter",true);
   request.send();
 };
 
