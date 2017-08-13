@@ -46,10 +46,11 @@ submit.onclick = function(){
           document.getElementById("namelist").innerHTML = list;
       }  
     };
+    
     var nameinput = document.getElementById("name");
     var name = nameinput.value;
     
-  request.open("GET","http://ajind033.imad.hasura-app.io/submit-name?name="+name,true);
+  request.open("GET","http://ajind033.imad.hasura-app.io/submit-name?name=" + name,true);
   request.send(null);
 };
 
