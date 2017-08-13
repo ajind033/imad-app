@@ -36,6 +36,8 @@ submit.onclick = function(){
       
       if(this.readystate === 4 && this.status === 200){
           var names= this.responseText;
+          
+          document.getElementById("temp").innerHTML = names;
           names = JSON.parse(names);
           var list="";
           
