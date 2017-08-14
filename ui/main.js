@@ -42,11 +42,10 @@ submit.onclick = function(){
           //Take some task
           
           if(this.status === 200){
-              document.getElementById("temp").innerHTML = this.responseText;
               
               
-              document.getElementById("temp").innerHTML = this.resposne;
-             var nas = JSON.parse(this.resposne);
+              document.getElementById("temp").innerHTML = this.resposneText;
+             var nas = JSON.parse(this.resposneText);
             //  var temp1 = ["name1","nmae12e"];
               var list = " ";
               for(var i=0; i<names.length; i++){
