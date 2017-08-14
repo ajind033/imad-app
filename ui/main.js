@@ -44,11 +44,11 @@ submit.onclick = function(){
           if(this.status === 200){
               document.getElementById("temp").innerHTML = this.responseText;
               var names = this.resposne;
-//names = JSON.parse(name);
-              var temp1 = ["name1","nmae12e"];
+             var nas = JSON.parse(name);
+            //  var temp1 = ["name1","nmae12e"];
               var list = " ";
               for(var i=0; i<names.length; i++){
-                  list = "<li>" + temp1[i] + "</li>"
+                  list = "<li>" + nas[i] + "</li>";
               }
                 document.getElementById("namelist").innerHTML = list;
           }
