@@ -50,6 +50,8 @@ submit.onclick = function(){
               for(var i=0; i<names.length; i++){
                   list = "<li>" + nas[i] + "</li>";
               }
+              
+                document.getElementById("temp1").innerHTML = list;
                 document.getElementById("namelist").innerHTML = list;
           }
       }
