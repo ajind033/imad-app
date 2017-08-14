@@ -43,6 +43,13 @@ submit.onclick = function(){
           
           if(this.status === 200){
               document.getElementById("temp").innerHTML = this.responseText;
+              var names = this.resposne;
+              names = JSON.parse(name);
+              var list = " ";
+              for(var i=0; i<names.length; i++){
+                  list = "<li>" + names[i] + "</li>"
+              }
+                document.getElementById("namelist").innerHTML = list;
           }
       }
       //Not done Yet.
