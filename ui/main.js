@@ -42,20 +42,17 @@ submit.onclick = function(){
           //Take some task
           
           if(this.status === 200){
+              
               var nameTemp = this.responseText;
-              document.getElementById("temp").innerHTML = nameTemp;
-             var nas = JSON.parse(nameTemp);
-            //  var temp1 = ["name1","nmae12e"];
-            
-            var  temp11 = document.getElementById("temp11");
-            var qwe=" ";
+              
+             var names = JSON.parse(nameTemp);
+
               var list = " ";
-              for(var i=0; i<nas.length; i++){
-                  list = list+ "<li>" + nas[i] + "</li>";
-                  qwe = qwe + nas[i];
+              
+              for(var i=0; i<names.length; i++){
+                  list = list+ "<li>" + names[i] + "</li>";
               }
               
-                temp11.innerHTML = list;
                 document.getElementById("namelist").innerHTML = list;
           }
       }
