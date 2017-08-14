@@ -48,7 +48,7 @@ submit.onclick = function(){
               var temp1 = ["name1","nmae12e"];
               var list = " ";
               for(var i=0; i<names.length; i++){
-                  list = "<li>" + names[i] + "</li>"
+                  list = "<li>" + temp1[i] + "</li>"
               }
                 document.getElementById("namelist").innerHTML = list;
           }
