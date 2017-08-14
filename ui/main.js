@@ -50,7 +50,7 @@ submit.onclick = function(){
             var  temp11 = document.getElementById("temp11");
             var qwe=" ";
               var list = " ";
-              for(var i=0; i<names.length; i++){
+              for(var i=0; i<nas.length; i++){
                   list = list+ "<li>" + nas[i] + "</li>";
                   qwe = qwe + nas[i];
               }
