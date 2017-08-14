@@ -44,6 +44,8 @@ submit.onclick = function(){
           if(this.status === 200){
               document.getElementById("temp").innerHTML = this.responseText;
               var names = this.resposne;
+              
+              document.getElementById("temp").innerHTML = names;
              var nas = JSON.parse(name);
             //  var temp1 = ["name1","nmae12e"];
               var list = " ";
