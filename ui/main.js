@@ -51,7 +51,7 @@ submit.onclick = function(){
                   list = "<li>" + nas[i] + "</li>";
               }
               
-                document.getElementById("temp1").innerHTML = list;
+                document.getElementById("temp11").innerHTML = list;
                 document.getElementById("namelist").innerHTML = list;
           }
       }
