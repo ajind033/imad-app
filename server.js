@@ -112,11 +112,16 @@ app.get('/submit-name',function(req,res){// for submit-name?name=xxx
 res.send(JSON.stringify(names));
 });
 
-
+var pool = new Pool(config);
 app.get('/test-db',function(req,res){
     // makee a select request
-    
     // return the result as response
+    
+    pool.query('SELECT * FROM test',function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+    });
 });
 
 app.get('/:articleName',function(req,res) {
