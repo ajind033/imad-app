@@ -128,9 +128,9 @@ app.get('/test-db',function(req,res){
 });
 
 app.get('/:articleName',function(req,res) {
-  var  articleName1 = req.params.articleName;
+  var  articleName1 = [req.params.articleName];
   
-    pool.query("SELECT * FROM articles where title '" + articleName1 +  "'",function(err,result){
+    pool.query("SELECT * FROM articles where title = $1",articleName1,function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
