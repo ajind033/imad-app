@@ -129,7 +129,22 @@ app.get('/test-db',function(req,res){
 
 app.get('/:articleName',function(req,res) {
   var  articleName1 = req.params.articleName;
-  res.send(createTemp(articles[articleName1]));
+  
+    pool.query('SELECT * FROM articles ',function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else{
+            if(resullt.rows === 0)
+            res.status(404).send('file not found');
+            
+            else{
+                var articlesData = result.rows[0];
+             res.send(createTemp(articlesData));   
+            }
+          
+        }
+    });
 });
 
 app.get('/ui/style.css', function (req, res) {
