@@ -130,7 +130,7 @@ app.get('/test-db',function(req,res){
 app.get('/:articleName',function(req,res) {
   var  articleName1 = req.params.articleName;
   
-    pool.query('SELECT * FROM articles ',function(err,result){
+    pool.query("SELECT * FROM articles where title '" + articleName1 +  "'",function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
