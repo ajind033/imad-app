@@ -27,7 +27,7 @@ To see the app in action you can follow the instructions below:
 ```sh
 $ git clone "https://github.com/ssahaxd/HPDF-task2-sub1"
 
-$ cd HPDF-task2-sub1
+$ cd HPDF-task2-sub1/frontend(ReactJs)
 
 # install dependencies
 $ npm install
