@@ -46,8 +46,7 @@ For the app to function need a server that will receive the form data sent by th
 ** Now for the action, choose Google sheets. Since we want to add user details as rows in a Sheet, click on `Create Spreadsheet Row`. Create a Google sheet in your Drive and give its link to the zap. Set up the sheet row by providing which column takes which value, obtained from the step-1 payload.
 ** To send email to signed up users, add another action: Email. Choose `Gmail` and choose the email field from step-1 as the `To` field. Write a custom email as a welcome message to the users :)
 ** Turn on the Zap.
-zap
-
+<img src ="https://raw.githubusercontent.com/ajind033/imad-app/master/myfile/Screenshot%20(5).png" alt= "Zap">
 ## Step 2 - Modify the controller code
 The controller code is written in `\microservices\api\src\controllers`
 
