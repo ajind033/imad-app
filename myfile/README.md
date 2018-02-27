@@ -35,14 +35,14 @@ For the app to function need a server that will receive the form data sent by th
    * The trigger will be WebHooks Catch Hook
    * Set this payload (replace the values with some inputs):
    
-   ` {
+   ``` {
         "name" :name,
         "birthdate" :birthdate ,
         "username" :username ,
         "email" :email ,
         "mobile" :mobile ,
         "city" :city
-    }`
+    }```
     
     * The trigger is now complete. A webhook URL will be generated, which will be required in Step 2. Now an action will be triggered whenever a POST/GET request is made at the generated webhook.
     * Now for the action, choose Google sheets. Since we want to add user details as rows in a Sheet, click on `Create Spreadsheet Row`. Create a Google sheet in your Drive and give its link to the zap. Set up the sheet row by providing which column takes which value, obtained from the step-1 payload.
