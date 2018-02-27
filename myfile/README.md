@@ -18,9 +18,49 @@ For the app to function need a server that will receive the form data sent by th
 
 # Where to make changes?
 
-* Nodejs Express
+* Nodejs-Express
  * To make changes to the project, browse to `/microservices/app/src` and edit the respective files according to your requirements.
  * Commit the changes, and run git push hasura master to deploy the changes.
 * React
  * To make changes to the project, browse to /`microservices/ui/app/src` and edit the respective files according to your requirements.
  * Commit the changes, and run git push hasura master to deploy the changes.
+
+# Tutorial: Nodejs-Express
+* Install NodeJS and Visual Basic Code or any other editor of your choice (for local development)
+* Run `$ npm install` to install all the dependencies.
+## Step 1 - Create Zap-webhook
+* Head to <a href = "https://zapier.com">Zapier website</a>
+* Sign up.
+* Click on `MAKE A ZAP!` to make your own Zap :)
+** The trigger will be WebHooks Catch Hook
+** Set this payload (replace the values with some inputs):
+   ` {
+        "name" :name,
+        "birthdate" :birthdate ,
+        "username" :username ,
+        "email" :email ,
+        "mobile" :mobile ,
+        "city" :city
+    }`
+** The trigger is now complete. A webhook URL will be generated, which will be required in Step 2. Now an action will be triggered whenever a POST/GET request is made at the generated webhook.
+** Now for the action, choose Google sheets. Since we want to add user details as rows in a Sheet, click on `Create Spreadsheet Row`. Create a Google sheet in your Drive and give its link to the zap. Set up the sheet row by providing which column takes which value, obtained from the step-1 payload.
+** To send email to signed up users, add another action: Email. Choose `Gmail` and choose the email field from step-1 as the `To` field. Write a custom email as a welcome message to the users :)
+** Turn on the Zap.
+zap
+
+## Step 2 - Modify the controller code
+The controller code is written in `\microservices\api\src\controllers`
+
+Run `hasura ms list` to generate the list of microservices and their URLs for your cluster.
+Replace the following URLs used in the server code with your own cluster's URLs and webhook URL.
+* Signup URL ()
+   ` url =  "https://auth.colostomy71.hasura-app.io/v1/signup"`
+* Data URL
+    `url = "https://data.colostomy71.hasura-app.io/v1/query"`
+* Webhook URL- to be replaced by the webhook url obtained in step-1
+  ` webHook = 'https://hooks.zapier.com/hooks/catch/2907826/8vw21h/' `
+## Step 3 - Push and deploy.
+Commit the changes and push the commit to deploy your project to your cluster.
+`git commit -am "First commit"`
+
+`git push hasura master`
