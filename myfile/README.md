@@ -61,6 +61,7 @@ Replace the following URLs used in the server code with your own cluster's URLs 
   ` webHook = 'https://hooks.zapier.com/hooks/catch/2907826/8vw21h/' `
 ## Step 3 - Push and deploy.
 Commit the changes and push the commit to deploy your project to your cluster.
+
 `git commit -am "First commit"`
 
 `git push hasura master`
