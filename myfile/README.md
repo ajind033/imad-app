@@ -15,3 +15,12 @@ For the app to function need a server that will receive the form data sent by th
 * The Nodejs-Express app is deployed as a microservice called app, and the react ui is deployed as a microservice called ui
 * Run the below command to open your app:
 `$ hasura microservice open ui`
+
+# Where to make changes?
+
+* Nodejs Express
+ * To make changes to the project, browse to `/microservices/app/src` and edit the respective files according to your requirements.
+ * Commit the changes, and run git push hasura master to deploy the changes.
+* React
+ * To make changes to the project, browse to /`microservices/ui/app/src` and edit the respective files according to your requirements.
+ * Commit the changes, and run git push hasura master to deploy the changes.
