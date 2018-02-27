@@ -169,3 +169,11 @@ my-app
 
   ![Signup view](https://raw.githubusercontent.com/ajind033/imad-app/master/ui/2.png "Signup view")
 
+# Contributors
+
+* Akash Jindal (Nodejs-Express)
+  * <a href="www.github.com/ajind033">Github</a>
+* Ashish Duklan  (Nodejs-Express)
+  * <a href="www.github.com/Ashish2097">Github</a>
+* Sandip Saha(React)
+  * <a href="www.github.com/ssahaxd">Github</a>
